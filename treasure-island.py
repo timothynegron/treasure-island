@@ -20,5 +20,21 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
 ''')
+
 print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.") 
+print("Your mission is to find the treasure.")
+
+userChoice = input("You're at a cross road. Where do you want to go? Type \"left\" or \"right\" ").lower()
+
+if userChoice == "right":
+    print("Game Over!")
+elif userChoice == "left":
+    userChoice2 = input("Swim or Wait? ").lower()
+    if userChoice2 == "swim":
+        print("Game Over!")
+    elif userChoice2 == "wait":
+        userChoice3 = input("Which door? Red | Blue | Yellow ").lower()
+        if userChoice3 == "yellow":
+            print("You found the treasure!")
+        else:
+            print("Game Over!")
